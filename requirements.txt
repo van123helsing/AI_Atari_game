@@ -1,5 +1,4 @@
 gym==0.17.0
-atari-py==1.2.1
 Keras==2.3.1
 matplotlib==3.2.0
 numpy==1.18.14
