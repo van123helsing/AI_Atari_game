@@ -1,0 +1,8 @@
+gym==0.17.0
+atari-py==1.2.1
+Keras==2.3.1
+matplotlib==3.2.0
+numpy==1.18.14
+opencv-python==4.2.0.34
+scipy==1.4.1
+tensorflow==2.0.0
