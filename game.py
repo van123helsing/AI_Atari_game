@@ -1,8 +1,10 @@
 import gym
 import numpy as np
-from game_models.ddqn_game_model import DDQNTrainer, DDQNSolver
+from game_models.ddqn_trainer import DDQNTrainer
+from game_models.ddqn_solver import DDQNSolver
 from gym_wrappers import MainGymWrapper
 import sys
+import time
 
 FRAMES_IN_OBSERVATION = 4
 FRAME_SIZE = 84
@@ -37,10 +39,13 @@ def _main_loop(game_model, env):
             score += reward
 
             # shranimo
+            tic = time.perf_counter()
             game_model.remember(current_state, action, reward, next_state, done)
             current_state = next_state
 
             game_model.step_update(total_step)
+            toc = time.perf_counter()
+            print(format(toc - tic, '.2f'))
 
             if done:
                 game_model.save_run(score, step, run)
