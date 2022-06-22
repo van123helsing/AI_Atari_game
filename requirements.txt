@@ -1,7 +1,7 @@
 gym==0.17.0
 Keras==2.3.1
 matplotlib==3.2.0
-numpy==1.18.14
+numpy==1.22.0
 opencv-python==4.2.0.34
 scipy==1.4.1
 tensorflow==2.0.0
